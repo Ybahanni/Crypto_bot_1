@@ -88,16 +88,18 @@ def get_historical_data(currency, timeframe):
     else:
         print("Erreur lors de la récupération des données historiques:", response.status_code)
         return None
+
+
     
-    
+    # Afin de recevoir la notif par mail , il faut remplir les données suivantes 
 EMAIL_HOST = 'smtp.gmail.com'  
 EMAIL_PORT = 587  
-EMAIL_USERNAME = 'bahannisyoussef@gmail.com'  
+EMAIL_USERNAME = 'XXXXXXXX@gmail.com'  
 EMAIL_PASSWORD = 'xxxxx'  
 
 def send_email_alert(currency, threshold, current_price):
     sender_email = EMAIL_USERNAME
-    receiver_email = 'sollasilalala@gmail.com'  # The recipient's email address
+    receiver_email = 'XXXXXXXX@gmail.com'  # The recipient's email address
     subject = f'Alert: {currency} Price Fell Below {threshold}'
     message = f"The price of {currency} has fallen below {threshold}. Current Price: {current_price}"
     
